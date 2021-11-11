@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet.css" type="text/css" href="../Assignment1/style.css">
+
     <title>Small Music Library</title>
 </head>
 <body>
@@ -13,18 +16,30 @@
         <p>Please insert a new album</p>
 
         <label>Album name:</label><br>
-        <input type="text" id="albumName"><br>
+        <input type="text" id="albumName" value="a"><br>
+
+        <br>
 
         <label>Artist(s):</label><br>
-        <input type="text" id="artist"><br>
+        <input type="text" id="artist" value="a"><br>
+
+        <br>
 
         <label>Number of songs:</label><br>
-        <input type="text" id="songs"><br>
+        <input type="text" id="songs" value="a"><br>
 
+        <br>
+        
         <label>Have you listened to it yet?</label><br>
-        <input type="text" id="hasListened"><br>
+        <input type="text" id="listened" value="a">
+  
 
-        <button type="button" value="Submit album!" onclick="addAlbumToLibrary()">
+        <br>
+
+        <button type="button" id="addAlbum">Add new album</button>
     </form>
+
+
+    <script src="Assignment1.js"></script>
 </body>
 </html>
