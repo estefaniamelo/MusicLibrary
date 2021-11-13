@@ -37,9 +37,25 @@
         <br>
 
         <button type="button" id="addAlbum">Add new album</button>
-
-        <button type="button" id="displayAlbum">Display albums</button>
     </form>
+
+    <!-- Displays all of the albums in the library -->
+    <button type="button" id="displayAlbum">Display albums</button>
+
+    <div id="libraryTable">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Album name</th>
+                    <th>Artist(s)</th>
+                    <th>Number of songs</th>
+                    <th>Have you listened to it?</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
 
 
     <script src="Assignment1.js"></script>

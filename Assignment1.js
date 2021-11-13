@@ -37,11 +37,6 @@
         myLibrary.push(album);
 
         console.log(myLibrary);
+
+        
     }
-
-
-
-
-function displayLibrary(){
-    
-}
