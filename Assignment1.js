@@ -61,7 +61,8 @@
             "<td>" + myLibrary[i].albumName + "</td>" +
             "<td>" + myLibrary[i].artist + "</td>" +
             "<td>" + myLibrary[i].songs + "</td>" +
-            "<td>" + myLibrary[i].listenedStatus + "</td>" + "<td>" + "<button type=\"button\"> Delete </button>" + "</td>"  
+            "<td>" + myLibrary[i].listenedStatus + "</td>" + "<td>" + "<button type=\"button\" class=\"" + "deleteBtn" + "\"> Delete </button>" + "</td>"  +
+            "<td>" + "<label class=\"switch\"> <input type=\"checkbox\"> <span class=\"slider round\"> </span> </label>" + "</td>" 
             + "</tr>";
 
 
@@ -71,28 +72,35 @@
     }
 
 
-// Displays and closes the modal for the form
-var btn = document.getElementById("add-btn");
+    // Displays and closes the modal for the form
+    var btn = document.getElementById("add-btn");
 
-var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0];
 
-var modal = document.getElementById("album-modal");
+    var modal = document.getElementById("album-modal");
 
-btn.onclick = function(){
-    modal.style.display = "block";
-}
+    btn.onclick = function(){
+        modal.style.display = "block";
+    }
 
-span.onclick = function(){
-    modal.style.display = "none";
-}
+    span.onclick = function(){
+        modal.style.display = "none";
+    }
 
-//Displays the table 
-var table = document.getElementById("libraryTable");
+    //Displays the table 
+    var table = document.getElementById("libraryTable");
 
-var displayBtn = document.getElementById("displayAlbum");
+    var displayBtn = document.getElementById("displayAlbum");
 
-displayBtn.onclick = function(){
-    table.style.display = "block";
-}
+    displayBtn.onclick = function(){
+        table.style.display = "block";
+    }
 
+    document.getElementsByClassName("deleteBtn").addEventListener("click", deleteAlbum);
+
+    function deleteAlbum(){
+        var row = document.getElementsByClassName("deleteBtn");
+
+        row.parentNode.removeChild(row);
+    }
 
