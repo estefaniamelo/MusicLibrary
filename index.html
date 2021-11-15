@@ -5,39 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet.css" type="text/css" href="../Assignment1/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Small Music Library</title>
 </head>
 <body>
     <h1>Welcome to my small music library</h1>
 
-    <form>
-        <p>Please insert a new album</p>
+    <div>
+        <h2>You don't have any albums in your library yet</h2>
+        <p>Please add some albums by clicking the button</p>
+    </div>
 
-        <label>Album name:</label><br>
-        <input type="text" id="albumName" value="a"><br>
+    <button type="button" id="add-btn">Open form</button>
 
-        <br>
-
-        <label>Artist(s):</label><br>
-        <input type="text" id="artist" value="a"><br>
-
-        <br>
-
-        <label>Number of songs:</label><br>
-        <input type="text" id="songs" value="a"><br>
-
-        <br>
+    <div id="album-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form> 
+                <p>Please insert a new album</p>
         
-        <label>Have you listened to it yet?</label><br>
-        <input type="text" id="listened" value="a">
-  
+                <label>Album name:</label><br>
+                <input type="text" id="albumName" value="a"><br>
+        
+                <br>
+        
+                <label>Artist(s):</label><br>
+                <input type="text" id="artist" value="a"><br>
+        
+                <br>
+        
+                <label>Number of songs:</label><br>
+                <input type="text" id="songs" value="a"><br>
+        
+                <br>
+                
+                <label>Have you listened to it yet?</label><br>
+                <input type="text" id="listened" value="a">
+          
+        
+                <br>
+        
+                <button type="button" id="addAlbum">Add new album</button>
 
-        <br>
-
-        <button type="button" id="addAlbum">Add new album</button>
-    </form>
+            </form>
+        </div>
+    </div>
+    
 
     <!-- Displays all of the albums in the library -->
     <button type="button" id="displayAlbum">Display albums</button>
@@ -46,6 +60,7 @@
         <table id="table">
             <thead>
                 <tr>
+                    <th></th>
                     <th>Album name</th>
                     <th>Artist(s)</th>
                     <th>Number of songs</th>
@@ -53,7 +68,9 @@
                 </tr>
             </thead>
 
-            <tbody id="tableBody"></tbody>
+            <tbody id="tableBody">
+
+            </tbody>
         </table>
     </div>
 
