@@ -30,15 +30,25 @@
         var songInput = document.getElementById('songs').value;
         var listenedInput = document.getElementById('listened').value;
 
+        //validating user input to make sure no empty strings are submitted
+        if(albumInput == "" && artistInput == "" && songInput == "" && listenedInput == ""){
+            window.alert("None of the fields can be empty. Try again.");
+        }
+
         let album = new Album(albumId, albumInput, artistInput, songInput, listenedInput);
         
-        console.log(album);
 
         myLibrary.push(album);
 
         autoIncrement++;
 
-        console.log(myLibrary);
+
+        //clearing the input values
+        document.getElementById('albumName').value = "";
+        document.getElementById('artist').value = "";
+        document.getElementById('songs').value = "";
+        document.getElementById('listened').value = "";
+
     }
 
     document.getElementById("displayAlbum").addEventListener("click", displayLibrary);
@@ -66,11 +76,6 @@
             buttons[i].addEventListener("click", deleteAlbum);
         }
 
-    }
-
-    window.onload = function(){
-        table.style.display = "block";
-        displayLibrary();
     }
 
     // Displays and closes the modal for the form
