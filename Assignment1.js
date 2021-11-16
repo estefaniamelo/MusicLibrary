@@ -33,15 +33,14 @@
         //validating user input to make sure no empty strings are submitted
         if(albumInput == "" && artistInput == "" && songInput == "" && listenedInput == ""){
             window.alert("None of the fields can be empty. Try again.");
+        } else{
+
+            let album = new Album(albumId, albumInput, artistInput, songInput, listenedInput);
+    
+            myLibrary.push(album);
+
+             autoIncrement++;
         }
-
-        let album = new Album(albumId, albumInput, artistInput, songInput, listenedInput);
-        
-
-        myLibrary.push(album);
-
-        autoIncrement++;
-
 
         //clearing the input values
         document.getElementById('albumName').value = "";

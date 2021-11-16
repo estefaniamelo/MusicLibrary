@@ -9,33 +9,28 @@ body{
     background-size: cover;
 }
 
-h1{
-    font-size: 24px;
-}
-
 #title{
     text-align: center;
-    border: 2px solid #264653;    
-    color: #023047;
+    border: 2px solid black;    
     border-radius: 5px;
-    font-weight: bolder;
-    background-color: #2a9d8f;
-    opacity: 0.9;
+    background-color: #7073c7;
     width: 80%;
     margin-left: 10%;
+    margin-bottom: 2%;
+    color: #001f1f;
 }
 
 #instructions{
-    color: #001524; 
+    color: #001f1f; 
     border: 2px solid black;
-    background-color: #2a9d8f;
+    background-color: #9c4f9c;
     border-radius: 5px;;
-    font-size: 20px;
-    font-weight: lighter;
-    opacity: 0.9;
+    font-size: 18px;
     text-align: center;
     width: 80%;
     margin-left: 10%;
+    margin-bottom: 2%;
+
 }
 
 #add-btn, #displayAlbum{
@@ -47,6 +42,8 @@ h1{
     font-size: 1rem;
     text-transform: uppercase;
     color: #5e60ce;
+    margin-bottom: 2%;
+
 }
 
 .buttons{
@@ -168,6 +165,13 @@ h1{
   }
 
 /* table styling starts here */
+caption{
+    font-size: 18px;
+    border: 2px solid black;
+    background-color: #9c4f9c;
+    border-radius: 5px;;
+}
+
 table{
     border-spacing: 0.5rem;
     table-layout: fixed;
@@ -175,24 +179,25 @@ table{
 }
 
 table, th, td {
-    border: 1px solid black;
     width: 75%;
     border-collapse: collapse;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 th, td{
-    border-bottom: 1px solid black;
     padding: 0.5rem;
 }
 
-tr:hover{
-    background-color: white;
-}
-
 tbody tr:nth-child(odd){
-    background-color: #ff33cc;
+
+    background-color: #bffcfc;
 }
 
 tbody tr:nth-child(even){
-    background-color: #e495e4;
+    background-color: #eefcfc;
+}
+
+th{
+    background-color: #7073c7;
 }
