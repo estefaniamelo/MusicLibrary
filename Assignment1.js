@@ -53,9 +53,9 @@
             "<td>" + myLibrary[i].albumName + "</td>" +
             "<td>" + myLibrary[i].artist + "</td>" +
             "<td>" + myLibrary[i].songs + "</td>" +
-            "<td>" + myLibrary[i].listenedStatus + "</td>" + "<td>" + "<button type=\"button\" class=\"" + "deleteBtn" + "\"> Delete </button>" + "</td>"  +
-            "<td>" + "<label class=\"switch\"> <input type=\"checkbox\"> <span class=\"slider round\"> </span> </label>" + "</td>" 
-            + "</tr>";
+            "<td>" + myLibrary[i].listenedStatus + "</td>" + 
+            "<td>" + "<button type=\"button\" class=\"" + "deleteBtn" + "\"> Delete </button>" + "</td>" +  
+            "</tr>";
         }
 
         document.getElementById("tableBody").innerHTML = html;

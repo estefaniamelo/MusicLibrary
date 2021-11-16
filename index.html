@@ -10,20 +10,26 @@
     <title>Small Music Library</title>
 </head>
 <body>
-    <h1>Welcome to my small music library</h1>
+    <header id="title">
+        <h1>Welcome to my small music library</h1>
+    </header>
 
-    <div>
-        <p>Please add some albums by clicking the button</p>
+    <div id="instructions">
+        <p>Add some albums by clicking the button below</p>
     </div>
 
-    <button type="button" id="add-btn">Add Album(s)</button>
+    <div class="buttons">
+        <button type="button" id="add-btn">Add Album(s)</button>
+
+        <button type="button" id="displayAlbum">Display albums</button>
+    </div>
 
     <div id="album-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <form> 
                 <button type="button" id="addAlbum">Add album</button>
-                <p>Please insert a new album</p>
+                <p>Insert a new album</p>
         
                 <label>Album name</label><br>
                 <input type="text" id="albumName" value="a"><br>
@@ -47,16 +53,12 @@
                 <br>
                 <br>
 
-                <!-- <button type="button" id="addAlbum">Add album</button> -->
-
             </form>
         </div>
     </div>
     
 
     <!-- Displays all of the albums in the library -->
-    <button type="button" id="displayAlbum">Display albums</button>
-
     <div id="libraryTable">
         <table id="table">
             <thead>
