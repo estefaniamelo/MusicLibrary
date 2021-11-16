@@ -39,7 +39,7 @@
 }
 
 #libraryTable{
-    display: none;
+    display: block;
 }
 
 .switch{

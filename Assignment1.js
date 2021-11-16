@@ -6,23 +6,12 @@
  * Your code should look something like this:
  */
     //declaring array
-    let myLibrary = [
-        {
-            albumName: "abc",
-            artist: "abc",
-            songs: "12",
-            listenedStatus: "yes"
-        },
-        {
-            albumName: "bcd",
-            artist: "bcd",
-            songs: "13",
-            listenedStatus: "bcd"
-        }
+    let myLibrary = [];
 
-    ];
+    var autoIncrement = 0; 
 
-    function Album(albumName, artist, songs, listenedStatus){
+    function Album(albumId, albumName, artist, songs, listenedStatus){
+        this.albumId = albumId;
         this.albumName = albumName;
         this.artist = artist;
         this.songs = songs;
@@ -35,16 +24,19 @@
     function addAlbumToLibrary(){
 
         //saving all user inputs into variables
+        var albumId = autoIncrement;
         var albumInput = document.getElementById('albumName').value;
         var artistInput = document.getElementById('artist').value;
         var songInput = document.getElementById('songs').value;
         var listenedInput = document.getElementById('listened').value;
 
-        let album = new Album(albumInput, artistInput, songInput, listenedInput);
+        let album = new Album(albumId, albumInput, artistInput, songInput, listenedInput);
         
         console.log(album);
 
         myLibrary.push(album);
+
+        autoIncrement++;
 
         console.log(myLibrary);
     }
@@ -57,20 +49,29 @@
 
         for(var i=0; i < arrayLength; i++){
 
-            html += "<tr id=\"" + "album" + i + "\" + data-album-id=\"" + i + "\">" +
+            html += "<tr class=\"rows\" + id=\"" + "album" + i + "\" + data-album-id=\"" + myLibrary[i].albumId + "\">" +
             "<td>" + myLibrary[i].albumName + "</td>" +
             "<td>" + myLibrary[i].artist + "</td>" +
             "<td>" + myLibrary[i].songs + "</td>" +
             "<td>" + myLibrary[i].listenedStatus + "</td>" + "<td>" + "<button type=\"button\" class=\"" + "deleteBtn" + "\"> Delete </button>" + "</td>"  +
             "<td>" + "<label class=\"switch\"> <input type=\"checkbox\"> <span class=\"slider round\"> </span> </label>" + "</td>" 
             + "</tr>";
-
-
         }
 
         document.getElementById("tableBody").innerHTML = html;
+
+        buttons = document.getElementsByClassName('deleteBtn');
+
+        for(i =0; i < buttons.length; i++){
+            buttons[i].addEventListener("click", deleteAlbum);
+        }
+
     }
 
+    window.onload = function(){
+        table.style.display = "block";
+        displayLibrary();
+    }
 
     // Displays and closes the modal for the form
     var btn = document.getElementById("add-btn");
@@ -96,11 +97,26 @@
         table.style.display = "block";
     }
 
-    document.getElementsByClassName("deleteBtn").addEventListener("click", deleteAlbum);
 
     function deleteAlbum(){
-        var row = document.getElementsByClassName("deleteBtn");
+        
+       var row= this.parentNode.parentNode;
+       var indexNum = row.getAttribute("data-album-id");
 
-        row.parentNode.removeChild(row);
+       row.parentNode.removeChild(row);
+
+        var filtered = myLibrary.filter(function(e) {
+            if (e.albumId == this) {
+                return false;
+            } else {
+                return true;
+            }
+        }, indexNum)
+
+        myLibrary = filtered; 
+
     }
+
+
+
 
