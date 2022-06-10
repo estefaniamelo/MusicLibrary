@@ -5,23 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <link 
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Small Music Library</title>
 </head>
 <body>
     <header id="title">
-        <h1>Welcome to my small music library</h1>
+        <h1>Small music library</h1>
     </header>
 
     <div id="instructions">
-        <p>Add some albums by clicking the button below</p>
+        <p>Add your favorite albums by clicking the button below!</p>
     </div>
 
     <div class="buttons">
-        <button type="button" id="add-btn">Add Album(s)</button>
+        <button class="button-primary" type="button" id="add-btn">
+            <span class="add-btn">Add Album(s)</span></button>
 
-        <button type="button" id="displayAlbum">Display albums</button>
+        <button class="button-primary" type="button" id="displayAlbum">
+           <span class="display-btn">Display Album(s)</span></button>
     </div>
 
     <div id="album-modal" class="modal">
@@ -29,29 +40,20 @@
             <span class="close">&times;</span>
             <form> 
                 <p>Insert a new album</p>
-        
-                <label>Album name</label><br>
+
+                <button type="button" id="addAlbum">Add Album</button><br>
+    
+                <label class="label" for="albumName">Album name</label><br>
                 <input type="text" id="albumName"><br>
         
-                <br>
-        
-                <label>Artist(s)</label><br>
+                <label class="label" for="artist">Artist(s)</label><br>
                 <input type="text" id="artist"><br>
         
-                <br>
-        
-                <label>Number of songs</label><br>
+                <label class="label" for="songs">Number of songs</label><br>
                 <input type="text" id="songs"><br>
-        
-                <br>
                 
-                <label>Have you listened to it yet?</label><br>
+                <label class="label" for="listened">Have you listened to it yet?</label><br>
                 <input type="text" id="listened">
-          
-        
-                <br>
-                <br>
-                <button type="button" id="addAlbum">Add album</button>
             </form>
         </div>
     </div>
@@ -78,6 +80,6 @@
     </div>
 
 
-    <script src="Assignment1.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
