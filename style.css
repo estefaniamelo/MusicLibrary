@@ -1,28 +1,27 @@
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 body{
     font-size: 14px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.80857;
     font-weight: normal;
-    background-color: #FFCC8F;
+    background-color: #15133C;
 }
 
 #title{
-    text-align: center;
-    border: 2px solid black;    
-    border-radius: 5px;
-    background-color: #A760FF;
+    text-align: center;    
+    background-color: #15133C;
     width: 80%;
     margin-left: 10%;
     margin-bottom: 2%;
-    color: #001f1f;
+    color: #F1EEE9;
     border-width: 1px;
 }
 
 #instructions{
-    color: #001f1f; 
-    border: 2px solid black;
-    background-color: #CA82FF;
-    border-radius: 5px;
+    color: #F1EEE9; 
+    background-color: #15133C;
     font-size: 18px;
     text-align: center;
     width: 80%;
@@ -34,30 +33,32 @@ body{
 
 #add-btn, #displayAlbum{
     display: inline-block;
-    padding: .75rem 1.25rem;
     border-radius: 10rem;
     color: #f5f3f4;
     transition: all .3s;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #5e60ce;
+    font-size: 20px;
     margin-bottom: 2%;
-
+    background-color: #15133C;
+    border-color: #f5f3f4;
 }
 
+#add-btn{
+    margin-right: 2%;
+}
+
+
 .buttons{
-    width: 45%;
-    margin-left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .deleteBtn{
     display: inline-block;
     padding: .25rem 0.5rem;
     border-radius: 10rem;
-    color: #f5f3f4;
-    transition: all .3s;
-    text-transform: uppercase;
-    color: #5e60ce;
+    color:#F1EEE9;
+    background-color: #15133C;
 }
 
 .modal{
@@ -187,32 +188,27 @@ table{
 table, th, td {
     width: 75%;
     border-collapse: collapse;
-    border-radius: 5px;
     border: 1px solid black;
+    color: #f5f3f4;
 }
 
 th, td{
     padding: 0.5rem;
 }
 
-tbody tr:nth-child(odd){
+tbody tr{
 
-    background-color: #bffcfc;
+    background-color: #15133C;
 }
 
-tbody tr:nth-child(even){
-    background-color: #eefcfc;
-}
 
 th{
-    background-color: #A760FF;
+    background-color: #15133C;
+    color: #f5f3f4;
 }
 
-.add-btn{
-    font-size: 2rem;
+#libraryTable h2{
+    text-align: center;
+    color: #f5f3f4;
+    font-size: 20 px;
 }
-
-.display-btn{
-    font-size: 1.5rem;
-}
-
